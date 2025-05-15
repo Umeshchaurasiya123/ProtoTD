@@ -1,0 +1,14 @@
+node_modules
+dist
+coverage
+.vscode
+*.log
+*.tsbuildinfo
+*.d.ts
+package-lock.json
+package.json
+.env
+*.env
+*.local
+*.local.*
+
