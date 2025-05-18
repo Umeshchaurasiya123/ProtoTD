@@ -17,4 +17,3 @@ connectDB()
     //console.error("Error connecting to the Database:", err);
     process.exit(1); // Exit the process with failure
   });
-

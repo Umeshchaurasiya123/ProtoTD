@@ -1,10 +1,11 @@
 class DatabaseError extends Error {
-  constructor(statusCode, message = "Database Error", error = []) {
+  constructor(statusCode, message = "Database  Connection issue", error = []) {
     super(message);
     this.statusCode = statusCode;
-    this.errorCode = Error.statusCode;
-    //this.statusCode = statusCode;
     this.name = "DatabaseError";
+    this.message = message;
+    this.success = false;
+
     Error.captureStackTrace(this, this.constructor);
   }
 }
