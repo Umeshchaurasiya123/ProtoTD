@@ -4,6 +4,7 @@ const { DB_NAME } = require("../constants.js");
 
 const DatabaseError = require("../utils/DatabaseError.js");
 
+
 const connectDB = async () => {
   try {
     const connectionInstance = await mongoose.connect(
@@ -16,7 +17,8 @@ const connectDB = async () => {
     console.log(`MONGODB CONNECTION ERROR: ${err.message}`);
     //process.exit(0);
     //throw err;
-    throw new DatabaseError(500, "Database Connection issue", err.message);
+    throw new DatabaseError(500, err.message,err.errorResponse);
+    
   }
 };
 
