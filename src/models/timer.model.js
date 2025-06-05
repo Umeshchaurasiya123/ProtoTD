@@ -2,21 +2,20 @@ const mongoose = require('mongoose');
 
 const TimerSchema = new mongoose.Schema({
 
-    startDate: {
+    dateAndTime: {
         type: Date,
         required: true,
         default: Date.now
     },
 
-    startTime: {
-        type: String,
-        required: true,
-        trim: true
-    },
-
     Repete:{
         type: Boolean,
         default: false
+    },
+
+    duration: {
+        type: Number,
+        default: 0 // Duration in minutes
     },
 
     todoBelong: {
