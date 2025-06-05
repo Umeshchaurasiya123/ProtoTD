@@ -25,6 +25,9 @@ app.use(express.static('public'));
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
+// Importing routes
+
+
 
 module.exports = app;
 //default export
